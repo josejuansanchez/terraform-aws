@@ -52,6 +52,12 @@ Crea los recursos del archivo de configuración en su cuenta de AWS.
 terraform apply
 ```
 
+Si queremos crear los recursos sin tener que escribir `yes` para confirmar la ejecución del comando, podemos utilizar la opción `-auto-approve`.
+
+```
+terraform apply -auto-approve
+```
+
 ### Mostrar el estado actual de los recursos
 
 Muestra los recursos creados en el proveedor y su estado actual.
@@ -73,6 +79,7 @@ terraform destroy
 - [Ejemplo 1](ejemplos/ejemplo-01). Crea una instancia EC2 en AWS.
 - [Ejemplo 2](ejemplos/ejemplo-02). Crea un grupo de seguridad y una instancia EC2 en AWS.
 - [Ejemplo 3](ejemplos/ejemplo-03). Crea un grupo de seguridad, una instancia EC2 en AWS y una IP elástica.
+- [Ejemplo 4](ejemplos/ejemplo-04). Ejecuta un script de bash en una instancia EC2.
 
 ## Referencias
 
