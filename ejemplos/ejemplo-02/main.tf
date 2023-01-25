@@ -34,6 +34,7 @@ resource "aws_security_group" "sg_ejemplo_02" {
 resource "aws_instance" "instancia_ejemplo_02" {
   ami             = "ami-00874d747dde814fa"
   instance_type   = "t2.small"
+  key_name        = "vockey"
   security_groups = [aws_security_group.sg_ejemplo_02.name]
 
   tags = {
