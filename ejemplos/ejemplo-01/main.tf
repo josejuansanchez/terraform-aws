@@ -12,3 +12,5 @@ resource "aws_instance" "instancia_ejemplo_01" {
     Name = "instancia_ejemplo_01"
   }
 }
+
+# No podremos conectarnos a la instancia porque no tiene grupo de seguridad
