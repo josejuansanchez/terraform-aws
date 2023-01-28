@@ -44,6 +44,14 @@ Para validar la sintaxis del archivo de configuración podemos utilizar el sigui
 terraform validate
 ```
 
+### Mostrar los cambios que se van a realizar
+
+Compara la configuración del archivo de Terraform con la que existe actualmente en el proveedor de infraestructura y muestra las acciones que se tienen que realizar para conseguir la configuración deseada. Permite al usuario verificar los cambios antes de aplicarlos en el proveedor.
+
+```
+terraform plan
+```
+
 ### Aplicar los cambios
 
 Crea los recursos del archivo de configuración en su cuenta de AWS.
@@ -80,6 +88,8 @@ terraform destroy
 - [Ejemplo 2](ejemplos/ejemplo-02). Crea un grupo de seguridad y una instancia EC2 en AWS.
 - [Ejemplo 3](ejemplos/ejemplo-03). Crea un grupo de seguridad, una instancia EC2 en AWS y una IP elástica.
 - [Ejemplo 4](ejemplos/ejemplo-04). Ejecuta un script de bash en una instancia EC2.
+- [Ejemplo 5](ejemplos/ejemplo-05). Configuración de variables en un archivo externo.
+- [Ejemplo 6](ejemplos/ejemplo-06). Configuración de la información de salida.
 
 ## Referencias
 
