@@ -22,6 +22,17 @@ resource "aws_security_group_rule" "ingress" {
   cidr_blocks = ["0.0.0.0/0"]
 }
 
+# Creamos las reglas de salida del grupo de seguridad.
+resource "aws_security_group_rule" "egress" {
+  security_group_id = aws_security_group.sg_ejemplo_05.id
+  type              = "egress"
+
+  from_port   = 0
+  to_port     = 0
+  protocol    = "-1"
+  cidr_blocks = ["0.0.0.0/0"]
+}
+
 # Creamos una instancia EC2
 resource "aws_instance" "instancia_ejemplo_05" {
   ami             = var.ami_id
