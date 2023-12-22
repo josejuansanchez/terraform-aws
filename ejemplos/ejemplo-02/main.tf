@@ -8,6 +8,7 @@ resource "aws_security_group" "sg_ejemplo_02" {
   name        = "sg_ejemplo_02"
   description = "Grupo de seguridad para la instancia de ejemplo 02"
 
+  # Reglas de entrada para permitir el tráfico SSH, HTTP y HTTPS
   ingress {
     from_port   = 22
     to_port     = 22
@@ -28,6 +29,14 @@ resource "aws_security_group" "sg_ejemplo_02" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  # Reglas de salida para permitir todas las conexiones salientes
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }  
 }
 
 # Creamos una instancia EC2
