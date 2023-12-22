@@ -6,10 +6,10 @@
 set -x
 
 # Actualizamos los repositorios
-sudo apt-get update
+sudo apt update
 
 # Instalamos los paquetes necesarios para que `apt` pueda usar repositorios sobre HTTPS
-sudo apt-get install -y \
+sudo apt install -y \
     ca-certificates \
     curl \
     gnupg \
@@ -25,10 +25,10 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 # Actualizamos la lista de paquetes
-sudo apt-get update
+sudo apt update
 
 # Instalamos la última versión de Docker y Docker Compose
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Añadimos el usuario actual al grupo docker
 sudo usermod -aG docker $USER
