@@ -13,13 +13,13 @@ variable "allowed_ingress_ports" {
 variable "sg_name" {
   description = "Nombre del grupo de seguridad"
   type        = string
-  default     = "sg_ejemplo_05"
+  default     = "sg_ejemplo_06"
 }
 
 variable "sg_description" {
   description = "Descripción del grupo de seguridad"
   type        = string
-  default     = "Grupo de seguridad para la instancia de ejemplo 05"
+  default     = "Grupo de seguridad para la instancia de ejemplo 06"
 }
 
 variable "ami_id" {
@@ -43,5 +43,5 @@ variable "key_name" {
 variable "instance_name" {
   description = "Nombre de la instancia"
   type        = string
-  default     = "instancia_ejemplo_05"
+  default     = "instancia_ejemplo_06"
 }
