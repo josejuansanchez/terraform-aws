@@ -31,7 +31,7 @@ apt update
 apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 # Añadimos el usuario actual al grupo docker
-usermod -aG docker $USER
+usermod -aG docker ${SUDO_USER}
 
 # Habilitamos el servicio de Docker para que se inicie automáticamente al arrancar el sistema
 systemctl enable docker
